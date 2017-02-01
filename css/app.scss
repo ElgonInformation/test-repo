@@ -1,0 +1,257 @@
+@import "bootstrap";
+@import "bootstrap/theme";
+@import "../bower_components/font-awesome/scss/font-awesome.scss";
+@import "_variables.scss";
+
+body {
+	background-color: $background;
+	a:link {
+		text-decoration:none;
+	}
+}
+.navbar {
+	border-radius: 0;
+	background-color: $header-color !important;
+	.navbar-brand {
+		font-family: $logo-font;
+		color: #fff !important;
+		font-size:1.6em;
+		&:hover {
+			color: darken(#fff, 20%) !important;
+		}
+	}
+	ul {
+		li {
+			padding: 0 10px;	
+		}
+		.search-box {
+			width: 200px;
+			padding-top:12px;
+
+		}
+		.search-form {
+			border-radius: 0 30px 30px 0;
+			border:none;
+			background-color: $darkpanel-background;
+		}
+		.search-icon {
+			border-radius: 30px 0 0 30px;
+			border: none;
+			background-color: $darkpanel-background;
+		}
+		.share {
+			padding-top: 2px;
+		}
+	}
+}
+
+.container-main {
+	width: 100%;
+	.main-panel {
+		width: 100% !important;
+	}
+
+	.panel-default > .main-panel-heading {
+		background-image: none;
+		background-color: $primary-color;
+		color: $paragraph-color;
+	}
+
+	.dark-panel {
+		.panel-heading {
+			background-color: $primary-color;
+			color:#fff;
+		}
+		.panel-body {
+			background-color: $darkpanel-background;
+			color:#fff;
+		}
+	}
+
+	.blue-panel {
+		.panel-heading {
+			background-color: $comment-background;
+			color:#fff;
+		}
+		.panel-body {
+			background-color: $bluepanel-background;
+			color:#fff;
+		}
+	}
+
+	.red-panel {
+		.panel-heading {
+			background-color: $redpanel-header;
+			color:#fff;
+		}
+		.panel-body {
+			background-color: $redpanel-background;
+			color:#fff;
+		}
+	}
+
+	.status-bar {
+		i {
+			margin-rigth: 8px;
+		}
+		span {
+			font-size: .7em;
+			text-transform: uppercase;
+		}
+		p {
+			color: $secondary-color;
+		}
+		.info {
+			background-color: $primary-color;
+			p {
+				color: #ccc;
+			}
+			.info-text {
+				padding-top: 8px;
+				padding-bottom: 2px;
+			}
+			i {
+				color: #ccc;
+			}
+		}
+	}
+	.tabs {
+		padding:0;
+		background-color: $secondary-color;
+
+		li {
+			width:25%;
+			margin: 0;
+			border-bottom: 3px solid $secondary-color;
+			a {
+				background-color: $secondary-color !important;
+				border-radius: 0;
+				color: #fff !important;
+			}
+			&:hover,
+			&:focus {
+				border-bottom: 3px solid #57f3c5;
+			}
+		}
+	}
+
+	.down-arrow {
+		background-color: $secondary-color;
+		border-left: 2px solid #ccc;
+		i {
+			display: inline-block;
+			padding-top: 7px;
+			padding-bottom: 7px;
+			color: #fff !important;
+		}
+	}
+
+	.up-arrow {
+		background-color: $background;
+		border-left: 2px solid #ccc;
+		i {
+			display: inline-block;
+			padding-top: 5px;
+			padding-bottom: 6px;
+			color: #fff !important;
+		}
+	}
+
+	.pamper-count {
+		background-color: $background;
+		.pamper-text {
+			float:left;
+			margin-top: 10px;
+		}
+		.dollar-chat {
+			margin-top: 10px;
+			ul {
+				width: 20%;
+				float: right;
+				color: $secondary-color;
+				li {
+					display: inline-block;
+					margin: 0 15px;
+				}
+			}
+		}
+	}
+	.chat-zone {
+		margin-bottom: 10px;
+		.chat-input {
+			margin-top : 10px;
+			span {
+				background-color: #fff;
+				border-left: none;
+				border-radius: 0 30px 30px 0;
+			}
+			input {
+				border-right: none;
+				border-radius: 30px 0 0 30px;
+			}
+		}
+	}
+	.btn-div {	
+		padding-left: 0;
+		margin-bottom: 10px;
+		.add-btn {
+			border-radius: 30px;
+			background-color: $comment-background !important;
+			background-image: none; 
+			color: #fff;
+			margin: 15px 0 8px;
+		}
+	}
+	img {
+		border-radius: 50%;
+		width: 40px;
+		margin-top: 20px;
+	}
+
+	.bubble{
+		p {
+			color: #000 !important;
+		}
+		position:relative;
+		width:580px;
+		color: #fff !important;
+		min-height:65px;
+		padding:15px;
+		background:#fff;
+		border-radius: 10px;
+		border:1px solid #ccc;
+	}
+
+	.bubble:after{
+		content:'';
+		position:absolute;
+		border-style:solid;
+		border-width:15px 15px 15px 0;
+		border-color:transparent #fff;
+		display:block;
+		width:0;
+		z-index:1;
+		margin-top:-15px;
+		left:-15px;
+		top:50%;
+	}
+
+	.bubble:before{
+		content:'';
+		position:absolute;
+		border-style:solid;
+		border-width:15px 15px 15px 0;
+		border-color:transparent #ccc;
+		display:block;
+		width:0;
+		z-index:0;
+		margin-top:-15px;
+		left:-16px;
+		top:50%;
+	}
+
+	.chat-img,
+	.chat-content {
+		margin-top: 20px;
+	}
+}
